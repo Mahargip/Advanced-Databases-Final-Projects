@@ -21,18 +21,7 @@ app.use('/post', postRouter);
 
 dotenv.config();
 
-//CONNECTION
-mongoose
-    .connect('mongodb+srv://admin:Gamer2003@basdatapi.eoyxavq.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log('Connection to MongoDB is established');
-        app.listen(3000, () => {
-            console.log('App is running on port 3000');
-        });
-    })
-    .catch((error) => {
-        console.log(error);
-    });
+//CONNECTION to MongoDB has been hide.
 
 // IMPORT CONTROLLER
 const userController = require('./api/controllers/userController');
